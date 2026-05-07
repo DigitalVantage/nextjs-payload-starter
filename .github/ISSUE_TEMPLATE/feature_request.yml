@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest an improvement or a new capability.
+title: '[feat] '
+labels: ['enhancement', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Please describe what you have in mind.
+        For non-trivial changes, opening a discussion first is encouraged.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pain are you trying to solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would the feature work? Code examples / mockups welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you think about, and why this one?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that helps us understand the request.

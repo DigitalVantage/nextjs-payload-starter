@@ -1,0 +1,82 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly.
+title: '[bug] '
+labels: ['bug', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in the sections below.
+        Reports without reproduction steps will likely be closed.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Y happens.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Numbered, copy-pasteable.
+      placeholder: |
+        1. Run `pnpm dev`
+        2. Open http://localhost:3000/admin
+        3. Click …
+    validations:
+      required: true
+
+  - type: input
+    id: starter-version
+    attributes:
+      label: Starter version (commit SHA or release tag)
+      placeholder: 0.1.0 or 4e12daf
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: v22.22.0
+    validations:
+      required: true
+
+  - type: input
+    id: pnpm-version
+    attributes:
+      label: pnpm version
+      placeholder: '9.14.2'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows (WSL)
+        - Windows (native)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Paste relevant logs, error messages, or attach screenshots. Wrap logs in triple backticks.
+      render: shell
