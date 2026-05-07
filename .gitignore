@@ -1,0 +1,47 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build / runtime
+build
+dist
+.next
+.turbo
+.vercel
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env
+.env
+.env.local
+.env.*.local
+
+# system
+.DS_Store
+Thumbs.db
+
+# generated
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Payload media uploads (instance-specific)
+public/media/
+
+# next-sitemap output
+public/robots.txt
+public/sitemap*.xml
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Coverage
+/coverage

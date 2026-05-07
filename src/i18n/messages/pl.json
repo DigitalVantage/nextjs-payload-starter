@@ -1,0 +1,34 @@
+{
+  "common": {
+    "loading": "Ładowanie…",
+    "error": "Coś poszło nie tak.",
+    "retry": "Spróbuj ponownie",
+    "readMore": "Czytaj więcej",
+    "close": "Zamknij",
+    "submit": "Wyślij",
+    "search": "Szukaj",
+    "menu": "Menu"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "blog": "Blog",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin"
+  },
+  "search": {
+    "placeholder": "Wpisz frazę…",
+    "noResults": "Brak wyników dla podanego zapytania.",
+    "results": "Wyniki wyszukiwania"
+  },
+  "form": {
+    "required": "Pole wymagane",
+    "invalidEmail": "Nieprawidłowy adres e-mail",
+    "successTitle": "Dziękujemy!",
+    "successMessage": "Wiadomość została wysłana. Skontaktujemy się wkrótce."
+  }
+}

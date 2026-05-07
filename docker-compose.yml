@@ -1,0 +1,36 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: nextjs-payload-starter-mongo
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    command: ['--storageEngine=wiredTiger']
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    image: node:22-alpine
+    container_name: nextjs-payload-starter-app
+    profiles: ['full']
+    working_dir: /app
+    command: sh -c "corepack enable && pnpm install --ignore-workspace && pnpm dev"
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - app-node-modules:/app/node_modules
+    env_file:
+      - .env
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+volumes:
+  mongo-data:
+  app-node-modules:
