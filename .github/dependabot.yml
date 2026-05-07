@@ -1,0 +1,68 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '06:00'
+      timezone: 'Europe/Warsaw'
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: 'chore(deps)'
+      include: 'scope'
+    groups:
+      payload:
+        patterns:
+          - 'payload'
+          - '@payloadcms/*'
+      next:
+        patterns:
+          - 'next'
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom'
+          - 'eslint-config-next'
+      radix:
+        patterns:
+          - '@radix-ui/*'
+      tailwind:
+        patterns:
+          - 'tailwindcss'
+          - '@tailwindcss/*'
+          - 'tw-animate-css'
+          - 'autoprefixer'
+          - 'postcss'
+      lint-format:
+        patterns:
+          - 'eslint'
+          - 'eslint-*'
+          - '@eslint/*'
+          - 'prettier'
+          - 'prettier-*'
+      testing:
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
+          - '@vitejs/plugin-react'
+          - '@playwright/test'
+          - '@testing-library/*'
+          - 'jsdom'
+      types:
+        patterns:
+          - '@types/*'
+        exclude-patterns:
+          - '@types/react'
+          - '@types/react-dom'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '06:00'
+      timezone: 'Europe/Warsaw'
+    commit-message:
+      prefix: 'ci(deps)'
+      include: 'scope'
