@@ -146,10 +146,6 @@ export function CTA() {
 
 ## Deployment on Coolify
 
-> 📖 **Full step-by-step deployment guide**: [**DigitalVantage/coolify-nextjs-payload-guide**](https://github.com/DigitalVantage/coolify-nextjs-payload-guide) — covers VPS install, Cloudflare DNS, MongoDB service, environment variables, persistent volumes, SSL, backups, troubleshooting and a production hardening checklist.
->
-> The TL;DR below is enough for an experienced Coolify user.
-
 The included `Dockerfile` is configured for Next.js [`output: 'standalone'`](https://nextjs.org/docs/pages/api-reference/next-config-js/output) — the smallest production image possible.
 
 In Coolify:
